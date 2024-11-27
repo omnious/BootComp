@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="Controllable Human Image Generation with Personalized Multi-Garments.">
+  <meta name="keywords" content="Human generation, Multi-garments , Synthetic data">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Controllable Human Image Generation with Personalized Multi-Garments</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -42,7 +42,7 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -81,7 +81,7 @@
 
   </div>
 </nav>
-
+ -->
 
 <section class="hero">
   <div class="hero-body">
@@ -106,7 +106,7 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>KAIST</span>
+            <span class="author-block"><sup>1</sup>KAIST,</span>
             <span class="author-block"><sup>2</sup>OMNIOUS.AI</span>
           </div>
 
@@ -114,7 +114,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://arxiv.org/pdf/2411.16801"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -123,7 +123,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/abs/2411.16801"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -131,25 +131,26 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Demo</span>
-                </a>
-              </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/yisol/BootComp"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
                   </a>
+              </span>
+              <!-- Demo Link. -->
+              <span class="link-block">
+                <a href="https://yisol.github.io/BootComp"
+                   class="external-link button is-normal is-rounded is-dark">
+                   <span class="icon" style="vertical-align: middle; font-size: 20px;">&#129303;</span>
+                   <!-- <span class="icon">
+                      <i class="fab fa-youtube"></i> -->
+                  <!-- </span> -->
+                  <span>Demo</span>
+                </a>
               </span>
               <!-- Dataset Link. -->
               <!-- <span class="link-block">
@@ -172,74 +173,13 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/images/teaser.png"
-                type="image/png">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf"> TL;DR: BootComp generates human images with multi-garments and diverse conditions.
-      </h2>
+        TL;DR: BootComp generates human images with multi-garments and various conditions.
+        </h2>  
+      <img id="teaser" src="./static/images/teaser.png" alt="teaser" style="height: 100%;">
     </div>
   </div>
 </section>
-
-
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -261,57 +201,100 @@
       </div>
     </div>
     <!--/ Abstract. -->
+</section>
 
     <!-- Method. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
-        <div class="publication-video">
-        <source src="./static/images/method.png"
-                type="image/png">
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Decomposition. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Decomposition module</h2>
+          <p>
+            We train a decomposition network mapping from a segmented garment to a product garment, and bootstrap <strong><em>synthetic</em></strong> paired data of human and multiple garment.
+          </p>
+          <img src="./static/images/decomposition.png" alt="decomp" style="width: 100%;">
+        </div>
+      </div>
+      <!--/ Decomposition. -->
+
+      <!-- Composition. -->
+      <div class="column">
+        <h2 class="title is-3">Composition module</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              We train a composition module with the <strong><em>synthetic</em></strong> paired dataset enabling BootComp to generate human images with multiple reference garment images.
+            </p>
+            <img src="./static/images/composition.png" alt="decomp" style="width: 100%;">
+          </div>    
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
-  </div>
+    <!--/ Composition. -->
+
 </section>
 
 
 <section class="section">
   <div class="container is-max-desktop">
 
-    <!-- multi garms Reulsts. -->
-    <div class="columns is-centered">
+    <!-- Multi-garments Results -->
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Multi-garments based human image generation</h2>
-
-        <!-- Interpolating. -->
         <div class="content has-text-justified">
           <p>
             BootComp can generate human images wearing multiple reference garments given by images.
           </p>
-          <img id="main_ret" autoplay muted loop playsinline height="100%">
-          <source src="./static/images/appendix_plane.png"
-                  type="image/png">
+          <div class="container">
+            <div id="results-carousel" class="carousel results-carousel">
+              <div class="item">
+                <img src="/static/images/appendix_plane.png" alt="MY ALT TEXT"/>
+                <h2 class="subtitle has-text-centered">
+                </h2>                
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </div> -->
+
+
+
+        <!--/ Multi-garments Results -->    
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Multi-garments based human image generation</h2>
+    
+            <!-- Multi-garments Results -->
+            <div class="content has-text-justified">
+              <p>
+                BootComp can generate human images wearing multiple reference garments given by images.
+              </p>
+              <img id="main_applications" src="./static/images/appendix_plane.png" alt="applications" style="height: 100%;">
+            </div>
+          </div>
+        </div>
+    
+
+
 
 
     <!--/ Applications. -->    
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Controllable human image generation.</h2>
+        <h2 class="title is-3">Controllable human image generation</h2>
 
-        <!-- Interpolating. -->
+        <!-- Applications. -->
         <div class="content has-text-justified">
           <p>
             BootComp enables controllable generation, handling various conditions like pose and style, as well as personalized generation like virtual try-on.
           </p>
-
-          <img id="main_applications" autoplay muted loop playsinline height="100%">
-          <source src="./static/images/page.png"
-                  type="image/png">
+          <img id="main_applications" src="./static/images/page.png" alt="applications" style="height: 100%;">
         </div>
       </div>
     </div>
@@ -322,26 +305,16 @@
     <!-- more apps of decomp. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">our decomposition module</h2>
+        <h2 class="title is-3">Decomposition module in various applications</h2>
 
+        <!-- Applications. -->
         <div class="content has-text-justified">
           <p>
-            We 
+            Our decomposition module can be applied to general domains that include common objects and can also be utilized for multi-view generation.
           </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+          <img id="main_applications" src="./static/images/page_general.png" alt="applications" style="height: 100%;">
         </div>
+
       </div>
     </div>
     <!--/ Concurrent Work. -->
@@ -349,7 +322,7 @@
   </div>
 </section>
 
-
+<!-- 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -360,19 +333,15 @@
   year      = {2021},
 }</code></pre>
   </div>
-</section>
+</section> -->
+
+
+
 
 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
@@ -385,6 +354,8 @@
     </div>
   </div>
 </footer>
+
+
 
 </body>
 </html>
