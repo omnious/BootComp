@@ -1,0 +1,15 @@
+accelerate==0.34.2
+datasets==2.20.0
+diffusers==0.30.0
+dreamsim==0.2.0
+easydict==1.13
+einops==0.8.0
+huggingface-hub==0.24.5
+lpips==0.1.4
+natsort==8.4.0
+numpy==1.26.4
+opencv-python==4.10.0.84
+pillow==10.2.0
+tokenizers==0.19.1
+tqdm==4.66.5
+transformers==4.44.2

@@ -1,0 +1,8 @@
+{
+    "0": {
+        "upper garment": "./example/shirts.jpg",
+        "lower garment": "./example/pants.jpg",
+        "shoes": "./example/shoes.jpg",
+        "text":"A man is wearing shirts and pants and shoes"
+    }
+}
